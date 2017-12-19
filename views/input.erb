@@ -1,0 +1,33 @@
+<div class='jumbotron'>
+	<h1>Bra Size Calculator</h1>
+	<h2>Fill Out This Form</h2>
+
+	<form class="form-inline" action="/result/" method="POST">
+		<div class="form-group">
+			<label for="underbust">Underbust</label>
+			<input id='underbust' type="number" class="form-control" name="underbust" placeholder="Underbust" step="1" min="24" max="120" required>
+		</div>
+		<div class="form-group">
+			<label for="bust">Bust</label>
+			<input id='bust' class="form-control" type="number" name="bust" placeholder="Bust" step="1" min="24" max="120" required>
+		</div>
+		<div class="form-group">
+			<label for="munit">Unit</label>
+			<select id='munit' name="munit" required>
+				<option value="cm">Centimeter</option>
+				<option value="inch">Inch</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="country">Country</label>
+			<select id='country' name="country" required>
+				<option value="france">France</option>
+				<option value="europe">Europe</option>
+				<option value="usa">USA</option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+	<img src="images/brameasurement.gif" class="img-responsive" alt="?">
+</div>
+
