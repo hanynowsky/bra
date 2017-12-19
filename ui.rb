@@ -13,7 +13,6 @@ get '/' do
 end
 
 post '/result/' do
-	#return 'Welcome Hanynowsky'
 	underbust = params[:underbust].to_i
 	bust = params[:bust].to_i
 	unit = params[:munit] || 'inch'
@@ -22,16 +21,5 @@ post '/result/' do
 	puts "DAta: #{underbust} #{bust} #{unit} #{country}"
 	puts "Result is #{result}"
 	erb :result, :locals => {'result' => result,'underbust' => underbust, 'bust' => bust , 'unit' => unit, 'country' => country}
-	#return  result
 end
 
-get '/hello/' do
-	erb :hello
-end
-
-post '/hello/' do
-	greeting = params[:greeting] || "Hi There"
-	name = params[:name] || "Nobody"
-
-	erb :index, :locals => {'greeting' => greeting, 'name' => name}
-end
