@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
 	s.executables << 'bra'
 	s.homepage    = 'http://rubygems.org/gems/bra'
 	s.license       = 'MIT'
+	s.required_ruby_version = '>= 1.9'
 end

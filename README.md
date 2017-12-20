@@ -13,9 +13,9 @@ AUTHOR
 
 REQUIREMENTS
 ===========
-- sinatra
 - ruby 2.0+
-- rake-test
+- ```gem install sinatra```
+- ```gem install rack-test```
 
 USAGE EXAMPLE
 =============
