@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative 'Bra'
+require_relative 'bin/Bra'
 
 set :port, 4564
 set :environment, :production

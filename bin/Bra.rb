@@ -8,8 +8,8 @@ require 'csv'
 module Bra
 	@debug = false
 	puts `ruby --version` if @debug
-	# TODO Fetch matrix file from a configurable json before using the default one
-	@matrix ='BRA-CHART.csv' || 'bra-chart.csv'
+	@matrix = Dir.pwd + '/data/BRA-CHART.csv'
+	@matrix = 'BRA-CHART.csv' unless File.file?(@matrix)
 	@cup = '0A'
 
 	# Convert Centimeters to inches
@@ -17,6 +17,7 @@ module Bra
 		return (cms.to_f / 2.54).round(2)
 	end
 
+	# Cup Converter - Corresponde between US,FR and EU
 	def cup_converter(cup, country)
 		@underbust = {
 			"50" => {"fr"=>"130", "eu"=>"115"},
@@ -49,6 +50,8 @@ module Bra
 		puts "#{e.message}" if @debug
 		return "00A"
 	end
+
+	# Computer Bra Size
 	def self.computer(ubust, bust, unit='inch', country='us')
 		if unit == 'cm' 
 			ubust = cm_to_inch(ubust.to_f)
