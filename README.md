@@ -15,3 +15,33 @@ REQUIREMENTS
 ===========
 - sinatra
 - ruby 2.0+
+- rake-test
+
+USAGE EXAMPLE
+=============
+```ruby bin/bra 83 102.6 cm france```
+
+WEB
+===
+``` ruby ui.rb```
+
+GEM USAGE
+========
+``` 
+require 'bra'
+include Bra
+puts Bra.computer(80,100,'cm','france')
+```
+
+TEST
+====
+```rake test```
+
+INSTALLATION
+============
+```
+$~ sudo gem install bra
+$~ bra 83 102 cm france
+90F
+
+```

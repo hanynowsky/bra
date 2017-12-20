@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative "Bra"
+require "bra"
+
 # Caller for Bra module
 #
 underbust = ARGV[0]

@@ -10,15 +10,15 @@ module Bra
 	puts `ruby --version` if @debug
 	@matrix = Dir.pwd + '/data/BRA-CHART.csv'
 	@matrix = 'BRA-CHART.csv' unless File.file?(@matrix)
-	@cup = '0A'
+	@cup = '00A'
 
 	# Convert Centimeters to inches
-	def cm_to_inch(cms)
+	def self.cm_to_inch(cms)
 		return (cms.to_f / 2.54).round(2)
 	end
 
-	# Cup Converter - Corresponde between US,FR and EU
-	def cup_converter(cup, country)
+	# Cup Converter - Correspondance between US,FR and EU
+	def self.cup_converter(cup, country)
 		@underbust = {
 			"50" => {"fr"=>"130", "eu"=>"115"},
 			"48" => {"fr"=>"125", "eu"=>"110"},
@@ -48,10 +48,10 @@ module Bra
 		return "#{ubust}#{cup}"
 	rescue => e
 		puts "#{e.message}" if @debug
-		return "00A"
+		return @cup
 	end
 
-	# Computer Bra Size
+	# Compute Bra Size
 	def self.computer(ubust, bust, unit='inch', country='us')
 		if unit == 'cm' 
 			ubust = cm_to_inch(ubust.to_f)
@@ -84,6 +84,6 @@ module Bra
 		return cup_converter(@cup, country)
 	rescue => e
 		puts "Error: #{e.message}"
-		return '00A'
+		return @cup
 	end
 end
