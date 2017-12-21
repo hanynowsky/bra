@@ -17,6 +17,8 @@ REQUIREMENTS
 - ```gem install sinatra```
 - ```gem install daemons```
 - ```gem install rack-test```
+- You can install requirements in one command:
+	-- ```cd path_to_bra_app_cloned_repo/ && gem install bundler && bundle ```
 
 USAGE EXAMPLE
 =============
