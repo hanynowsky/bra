@@ -60,6 +60,19 @@ $~ bra 83 102 cm france
 
 ```
 
+BUILD
+=====
+```
+# Supposing hanynowsky is username in RubyGems.org
+curl -u hanynowsky https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials
+chmod 0600 ~/.gem/credentials
+gem build bra.gemspec
+gem push bra-1.0.1.gem
+# After one minute
+gem list -r bra
+
+```
+
 LICENSE
 =======
 
