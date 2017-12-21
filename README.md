@@ -13,12 +13,14 @@ AUTHOR
 
 REQUIREMENTS
 ===========
-- ruby 2.0+
-- ```gem install sinatra```
-- ```gem install daemons```
-- ```gem install rack-test```
+- Gem: ruby 1.9+
+- Web: ```gem install sinatra```
+- Web: ```gem install daemons```
+- Web: ```gem install rack-test```
 - You can install requirements in one command:
-	-- ```cd path_to_bra_app_cloned_repo/ && gem install bundler && bundle ```
+	-- ```
+		cd path_to_bra_app_cloned_repo/ && gem install bundler && bundle 
+	```
 
 USAGE EXAMPLE
 =============
@@ -28,6 +30,14 @@ WEB
 ===
 ``` ruby ui.rb```
 - To daemonize the Web app, use ```$~ ruby bra-app start|stop|status ```
+
+WEB PROXY
+=========
+- Apache
+``` 
+        ProxyPass /bra http://localhost:4564/
+        ProxyPassReverse /bra http://localhost:4564/
+```
 
 GEM USAGE
 ========
@@ -49,3 +59,8 @@ $~ bra 83 102 cm france
 90F
 
 ```
+
+LICENSE
+=======
+
+- GPL v2
