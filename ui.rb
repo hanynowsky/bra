@@ -12,8 +12,18 @@ get '/' do
 	erb :input
 end
 
-
 post '/result' do
+	underbust = params[:underbust].to_i
+	bust = params[:bust].to_i
+	unit = params[:munit] || 'inch'
+	country = params[:country] || ''
+	result = Bra.computer(underbust, bust, unit, country)
+	puts "Data: #{underbust} #{bust} #{unit} #{country}"
+	puts "Result is #{result}"
+	erb :result, :locals => {'result' => result,'underbust' => underbust, 'bust' => bust , 'unit' => unit, 'country' => country}
+end
+
+post '/bra/result' do
 	underbust = params[:underbust].to_i
 	bust = params[:bust].to_i
 	unit = params[:munit] || 'inch'
