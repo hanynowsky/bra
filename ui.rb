@@ -12,7 +12,8 @@ get '/' do
 	erb :input
 end
 
-post '/result/' do
+
+post '/result' do
 	underbust = params[:underbust].to_i
 	bust = params[:bust].to_i
 	unit = params[:munit] || 'inch'

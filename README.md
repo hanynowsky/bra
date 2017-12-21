@@ -15,6 +15,7 @@ REQUIREMENTS
 ===========
 - ruby 2.0+
 - ```gem install sinatra```
+- ```gem install daemons```
 - ```gem install rack-test```
 
 USAGE EXAMPLE
@@ -24,6 +25,7 @@ USAGE EXAMPLE
 WEB
 ===
 ``` ruby ui.rb```
+- To daemonize the Web app, use ```$~ ruby bra-app start|stop|status ```
 
 GEM USAGE
 ========
