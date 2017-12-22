@@ -2,7 +2,7 @@ require 'rubygems'
 require 'daemons'
 
 pwd = Dir.pwd
-`touch #{pwd}/bra-app.log`
+`touch #{pwd}/log/bra-app.log 2>/dev/null`
 
 @options = {
 	:dir_mode   => :normal,

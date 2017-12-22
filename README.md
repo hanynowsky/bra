@@ -18,7 +18,8 @@ REQUIREMENTS
 - Web: ```gem install daemons```
 - Web: ```gem install rack-test```
 - You can install requirements in one command:
-	-- ```
+	-- 
+	```
 		cd path_to_bra_app_cloned_repo/ && gem install bundler && bundle 
 	```
 
@@ -29,7 +30,10 @@ USAGE EXAMPLE
 WEB
 ===
 ``` ruby ui.rb```
-- To daemonize the Web app, use ```$~ ruby bra-app start|stop|status ```
+- To daemonize the Web app, use 
+	```
+	$~ ruby bra-app start|stop|status 
+	```
 
 WEB PROXY
 =========
