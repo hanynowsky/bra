@@ -1,10 +1,14 @@
 BRA SIZE COMPUTER
 =================
 - "HELP: ruby bra.rb UNDERBUST BUST UNIT [COUNTRY]"
+- "HELP: ruby bra.rb UNDERBUST BUST UNIT [COUNTRY]"
 - "HELP: Example: ruby bra.rb 83 102.6 cm"
 - "HELP: Example: ruby bra.rb 35.1 41.5 inch"
 - "HELP: Example: ruby bra.rb 35.1 41.5 inch europe"
 - "HELP: Example: ruby bra.rb 83 102 inch france"
+
+-- UNIT: cm or inch
+-- COUNTRY: france or europe (if left empty defaults to USA)
 
 AUTHOR
 ======
